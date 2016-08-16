@@ -15,15 +15,15 @@ public class LogginAspect {
 	/*
 	 * 使用@Pointcut来表示切入点表达式
 	 */
-	@Pointcut("execution(* com.yuxiaoli.dao.CustomerDaoImpl.*(..))")
+	@Pointcut("execution(* com.yuxiaoli.dao.CustomerDaoImpl.addCustomer(..))")
 	public void declareJoinPointExpression(){}
 	
 	@Before("declareJoinPointExpression()")
-	public void beforeMethod(){
+	public void beforeInsertCoustomerEvent(){
 		System.out.println("Before insert Customer Data");
 	}
 	@After("declareJoinPointExpression()")
-	public void afterMethod(){
+	public void afterInsertCoustomerEvent(){
 		System.out.println("After insert Customer Data");
 	}
 }

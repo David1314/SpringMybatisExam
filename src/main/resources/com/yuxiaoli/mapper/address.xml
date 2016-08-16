@@ -7,4 +7,12 @@
 	<select id="selectById" parameterType="int" resultType="com.yuxiaoli.entity.Address">
 		select * from address where address_id=#{address_id}
 	</select>
+	
+	<select id="selectCountryId" parameterType="int" resultType="int">
+		 select city_id from address where address_id=#{address_id}
+	</select>
+	
+	<delete id="deleteAddress" parameterType="int">
+		delete from address where address_id=#{address_id}
+	</delete>
 </mapper>

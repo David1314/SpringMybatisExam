@@ -35,5 +35,16 @@ public class CustomerDaoImpl  implements CustomerDao {
 		}
 		return customer;
 	}
+	public void deleteCustomer(int id) {
+		SqlSession session=MyBatisUtil.getSession(true);
+		try {
+			session.update("change");
+			session.delete("deleteCustomer", id);
+			System.out.println("你输入的ID为"+id+"的Customer已经删除。");
+		} finally {
+			session.close();
+		}
+		
+	}
 
 }

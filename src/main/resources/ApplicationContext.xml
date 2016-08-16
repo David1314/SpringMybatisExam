@@ -27,4 +27,24 @@
 		<property name="addressDao" ref="addressDao"></property>
 	</bean>
 
+	<!-- city配置 -->
+	<bean id="cityDao" class="com.yuxiaoli.dao.CityDaoImpl"></bean>
+	
+	<bean id="cityService" class="com.yuxiaoli.service.CityServiceImpl">
+		<property name="cityDao" ref="cityDao"></property>
+	</bean>
+	
+	<!-- country配置 -->
+	<bean id="countryDao" class="com.yuxiaoli.dao.CountryDaoImpl"></bean>
+	
+	<bean id="countryService" class="com.yuxiaoli.service.CountryServiceImpl">
+		<property name="countryDao" ref="countryDao"></property>
+	</bean>
+	
+	<!-- store配置 -->
+	<bean id="storeDao" class="com.yuxiaoli.dao.StoreDaoImpl"></bean>
+	
+	<bean id="storeService" class="com.yuxiaoli.service.StoreServiceImpl">
+		<property name="storeDao" ref="storeDao"></property>
+	</bean>
 </beans>

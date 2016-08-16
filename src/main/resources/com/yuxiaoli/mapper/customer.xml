@@ -15,4 +15,12 @@
 	<select id="selectCustomerById" parameterType="int" resultType="com.yuxiaoli.entity.Customer">
 		select * from customer where customer_id=#{customer_id}
 	</select>
+	
+	<delete id="deleteCustomer" parameterType="int">
+		delete from customer where customer_id=#{customer_id};
+	</delete>
+	
+	<update id="change">
+		SET FOREIGN_KEY_CHECKS=0
+	</update>
 </mapper>

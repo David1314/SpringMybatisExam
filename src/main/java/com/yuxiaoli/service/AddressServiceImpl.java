@@ -18,4 +18,12 @@ public class AddressServiceImpl implements AddressService {
 		return addressDao.selectByID(id);
 	}
 
+	public int selectCityById(int id) {
+		return addressDao.selectCityById(id);
+	}
+
+	public void deleteAddressById(int id) {
+		addressDao.deleteAddressById(id);
+	}
+
 }

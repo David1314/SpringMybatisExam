@@ -9,7 +9,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.yuxiaoli.entity.Address;
 import com.yuxiaoli.entity.Customer;
 import com.yuxiaoli.service.AddressService;
+import com.yuxiaoli.service.CityService;
+import com.yuxiaoli.service.CountryService;
 import com.yuxiaoli.service.CustomerService;
+import com.yuxiaoli.service.StoreService;
 
 /**
  * Hello world!
@@ -63,7 +66,30 @@ public class App
         	customer_id=input.nextInt();
         	customer1=customerService.selectCustomerById(customer_id);
         }
-        
-        
+//        address_id=customer1.getAddress_id();
+//        //通过address_id来查询city_id
+//        int city_id=addressService.selectCityById(address_id);
+//        //通过city_id来查询country_id
+//        CityService cityService=ctx.getBean("cityService",CityService.class);
+////        System.out.println("city_id:"+city_id);
+//        int country_id=cityService.selectCountryById(city_id);
+////        System.out.println("aaaaaa");
+//        //删除country表中的数据
+////        System.out.println("---begin country-----");
+//        CountryService countryService=ctx.getBean("countryService",CountryService.class);
+//        countryService.deleteCountryById(country_id);
+////        System.out.println("---end country-----");
+//        //删除city表中的数据
+////        System.out.println("---begin city-----");
+//        cityService.deleteCityById(city_id);
+////        System.out.println("---end city-----");
+//        //删除address表中的数据
+//        addressService.deleteAddressById(address_id);
+//        //删除store表中的数据
+//        int store_id=customer1.getStore_id();
+//        StoreService storeService=ctx.getBean("storeService",StoreService.class);
+//        storeService.deleteStore(store_id);
+        //删除Customer表中的数据
+        customerService.deleteCustomer(customer_id);
     }
 }

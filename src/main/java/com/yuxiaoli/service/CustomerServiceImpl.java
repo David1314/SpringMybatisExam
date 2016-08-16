@@ -22,6 +22,10 @@ public class CustomerServiceImpl implements CustomerService {
 	public Customer selectCustomerById(int id) {
 		return customerDao.selectCustomerById(id);
 	}
+
+	public void deleteCustomer(int id) {
+		customerDao.deleteCustomer(id);
+	}
 	
 	
 

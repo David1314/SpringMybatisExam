@@ -4,5 +4,7 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
     
 <mapper namespace="/">
-
+	<delete id="deleteStore" parameterType="int">
+		delete from store where store_id=#{store_id}
+	</delete>
 </mapper>
