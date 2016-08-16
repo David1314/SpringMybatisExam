@@ -18,6 +18,10 @@ public class CustomerServiceImpl implements CustomerService {
 	public void addCustomer(Customer customer) {
 		customerDao.addCustomer(customer);
 	}
+
+	public Customer selectCustomerById(int id) {
+		return customerDao.selectCustomerById(id);
+	}
 	
 	
 
